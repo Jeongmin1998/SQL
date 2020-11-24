@@ -1,6 +1,6 @@
 # https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial
-# "World"¶ó´Â Å×ÀÌºí
-# ³ª¶ó, ¼ÓÇÑ ´ë·ú, ¸éÀû, ÀÎ±¸, GDP¿¡ °ü·ÃÇÑ µ¥ÀÌÅÍ 
+# "World"ë¼ëŠ” í…Œì´ë¸”
+# ë‚˜ë¼, ì†í•œ ëŒ€ë¥™, ë©´ì , ì¸êµ¬, GDPì— ê´€ë ¨í•œ ë°ì´í„° 
 
 -- SQLZOO: SELECT from WORLD Tutorial 
 
@@ -96,9 +96,9 @@ WHERE name LIKE '%a%'
 AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%'
 AND name NOT LIKE '% %';
 
-**¿À´Ã ¾Ë°ÔµÈ Á¡**
-1. round·Î ¼Ò¼öÁ¡ Á¤ÇÏ±â
-2. Left(,)À¸·Î ¿øÇÏ´Â ¹®ÀÚ ÃßÃâ
+**ì˜¤ëŠ˜ ì•Œê²Œëœ ì **
+1. roundë¡œ ì†Œìˆ˜ì  ì •í•˜ê¸°
+2. Left(,)ìœ¼ë¡œ ì›í•˜ëŠ” ë¬¸ìž ì¶”ì¶œ
 3. <>: NOT EQUALS
 
 
