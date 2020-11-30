@@ -1,5 +1,5 @@
 # https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial
-# 'world'Å×ÀÌºí; ³ª¶ó¸í, ´ë·ú, ¸éÀû, ÀÎ±¸, GDP
+# 'world'í…Œì´ë¸”; ë‚˜ë¼ëª…, ëŒ€ë¥™, ë©´ì , ì¸êµ¬, GDP
 # SELECT Tutorial
 
 --1. List each country name where the population is larger than that of 'Russia'.
@@ -9,7 +9,7 @@ WHERE population >
      (SELECT population FROM world
       WHERE name='Russia');
       
-** SELECT¹® ¾È¿¡ SELECT¹® ¹­À» ¼ö ÀÖ´Ù!** : ¼­ºêÄõ¸®
+** SELECTë¬¸ ì•ˆì— SELECTë¬¸ ë¬¶ì„ ìˆ˜ ìˆë‹¤!** : ì„œë¸Œì¿¼ë¦¬
 
 
 --2. Show the countries in Europe with a per capita GDP greater than 'United Kingdom'.
@@ -37,14 +37,14 @@ SELECT name, CONCAT(ROUND(population/(SELECT population FROM world WHERE name = 
 FROM world
 WHERE continent='Europe'; 
 
-**¹®ÀÚ ºÙÀÌ°í ½ÍÀ» ¶§ CONCAT!**
+**ë¬¸ì ë¶™ì´ê³  ì‹¶ì„ ë•Œ CONCAT!**
 
 --6. Which countries have a GDP greater than every country in Europe? [Give the name only.] (Some countries may have NULL gdp values)
 
 SELECT name FROM world
 WHERE gdp > ALL(SELECT gdp FROM world WHERE continent='Europe' AND gdp>0);
 
-**ALL ÁÖÀÇ!**
+**ALL ì£¼ì˜!**
 
 --7. Find the largest country (by area) in each continent, show the continent, the name and the area
 
