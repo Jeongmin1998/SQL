@@ -1,6 +1,6 @@
 #https://www.w3resource.com/sql-exercises/movie-database-exercise/basic-exercises-on-movie-database.php#SQLEDITOR
 
-# 'movie'¶ó´Â µ¥ÀÌÅÍº£ÀÌ½º
+# 'movie'Â¶Ã³Â´Ã‚ ÂµÂ¥Ã€ÃŒÃ…ÃÂºÂ£Ã€ÃŒÂ½Âº
 
 --1. Write a query in SQL to find the name and year of the movies.
 
