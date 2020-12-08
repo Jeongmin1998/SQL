@@ -1,6 +1,6 @@
 # https://www.w3resource.com/sql-exercises/hospital-database-exercise/sql-exercise-on-hospital-database.php
 
-#'hospital' µ¥ÀÌÅÍº£ÀÌ½º
+#'hospital' ë°ì´í„°ë² ì´ìŠ¤
 
 --1. Write a query in SQL to find all the information of the nurses who are yet to be registered. 
 
@@ -58,7 +58,7 @@ SELECT p.name AS P, d.name AS D
 FROM physician p, department d, affiliated_with a
 WHERE p.employeeid=a.physician AND a.department=d.departmentid;
 
-** À§¿Í °°ÀÌ ÄÃ·³¸í ¶È°°À» ‹ º°µµ·Î ¼³Á¤ÇØÁáÀ» ¶§ ¿øÇÏ´Â °á°ú ³ª¿ÔÀ½
+** ìœ„ì™€ ê°™ì´ ì»¬ëŸ¼ëª… ë˜‘ê°™ì„ Â‹Â ë³„ë„ë¡œ ì„¤ì •í•´ì¤¬ì„ ë•Œ ì›í•˜ëŠ” ê²°ê³¼ ë‚˜ì™”ìŒ
 
 
 
@@ -340,18 +340,18 @@ ORDER BY blockfloor, blockcode;
 --26. Write a query in SQL to find out the floor where the maximum no of rooms are available.
 
 
-----1) Ãşº°·Î »ç¿ëÇÒ ¼ö ÀÖ´Â ¹æÀÇ °³¼ö
+----1) ì¸µë³„ë¡œ ì‚¬ìš©í•  ìˆ˜ ìˆëŠ” ë°©ì˜ ê°œìˆ˜
 (SELECT blockfloor, count(*) AS t1
 FROM room
 WHERE anavailable='false'
 GROUP BY blockfloor) AS t2
 
-----2) + Ãşº° ÃÖ´ë ·ë³Ñ¹ö
+----2) + ì¸µë³„ ìµœëŒ€ ë£¸ë„˜ë²„
 
 SELECT max(t1) AS highest_total
 FROM t2
 
-----3) + Á¦ÀÏ Å« ·ë³Ñ¹ö°¡ ÀÖ´Â Ãş
+----3) + ì œì¼ í° ë£¸ë„˜ë²„ê°€ ìˆëŠ” ì¸µ
 
 SELECT blockfloor as "Floor",
        count(*) AS  "No of available rooms"
@@ -395,8 +395,8 @@ FROM stay s, patient p, room r
 WHERE p.ssn=s.patient AND s.room=r.roomnumber;
 
 
------* ÀÌ¸§ µû·Î Á¤ÇØÁÙ ¶§ 'AS=°ø¹éÀÌ¾î¼­' ¾Æ¹«°Å³ª »ç¿ëÇØÁÖ¸é µÊ.
------* ´ë¹®ÀÚ¸¦ »ì·Á¼­ ÀÌ¸§ Á¤ÇØÁÖ°í ½ÍÀ» ¶© ¹İµå½Ã ""»ç¿ëÇØÁÖ¾î¾ßÇÔ.
+-----* ì´ë¦„ ë”°ë¡œ ì •í•´ì¤„ ë•Œ 'AS=ê³µë°±ì´ì–´ì„œ' ì•„ë¬´ê±°ë‚˜ ì‚¬ìš©í•´ì£¼ë©´ ë¨.
+-----* ëŒ€ë¬¸ìë¥¼ ì‚´ë ¤ì„œ ì´ë¦„ ì •í•´ì£¼ê³  ì‹¶ì„ ë• ë°˜ë“œì‹œ ""ì‚¬ìš©í•´ì£¼ì–´ì•¼í•¨.
 
 
 
@@ -418,8 +418,8 @@ WHERE u.patient=pa.ssn AND u.physician=ph.employeeid AND u.assistingnurse=n.empl
 AND u.patient=s.patient AND s.room=r.roomnumber AND pr.code=u.procedure;
 
 
-----* ÀÌ·¯ÇÑ ¹æ½ÄÀ¸·Î ÄÚµå¸¦ Â®À» ; 'Nurse'ÄÃ·³¿¡ °áÃøÄ¡°¡ ÀÖ´Âµ¥ °áÃøÄ¡°¡ Æ÷ÇÔµÈ ÇàÀº ³ª¿ÀÁö ¾ÊÀ½
-----* JOIN¹®À» ½áÁà¾ß ÇÔ
+----* ì´ëŸ¬í•œ ë°©ì‹ìœ¼ë¡œ ì½”ë“œë¥¼ ì§°ì„ ; 'Nurse'ì»¬ëŸ¼ì— ê²°ì¸¡ì¹˜ê°€ ìˆëŠ”ë° ê²°ì¸¡ì¹˜ê°€ í¬í•¨ëœ í–‰ì€ ë‚˜ì˜¤ì§€ ì•ŠìŒ
+----* JOINë¬¸ì„ ì¨ì¤˜ì•¼ í•¨
 
 ----Sample Solution
 
