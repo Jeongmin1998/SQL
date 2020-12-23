@@ -48,8 +48,8 @@ SELECT play_date "Beginning Date"
 FROM match_mast
 WHERE match_no=1;
 
-**º¸±â ´ä¾È¿¡¼­´Â ¸Ç Ã³À½ °æ±â ¹øÈ£¸¦ Á¶°ÇÀ¸·Î °É¾îÁÖ¾î¼­ ³¯Â¥¸¦ ÃßÃâÇß°í,
-  ³ª´Â °æ±â°¡ ¿­¸° ³¯ ÁßÀÇ °¡Àå ÀÌ¸¥ ³¯Â¥¸¦ ÃßÃâÇß´Ù.**
+**ë³´ê¸° ë‹µì•ˆì—ì„œëŠ” ë§¨ ì²˜ìŒ ê²½ê¸° ë²ˆí˜¸ë¥¼ ì¡°ê±´ìœ¼ë¡œ ê±¸ì–´ì£¼ì–´ì„œ ë‚ ì§œë¥¼ ì¶”ì¶œí–ˆê³ ,
+  ë‚˜ëŠ” ê²½ê¸°ê°€ ì—´ë¦° ë‚  ì¤‘ì˜ ê°€ì¥ ì´ë¥¸ ë‚ ì§œë¥¼ ì¶”ì¶œí–ˆë‹¤.**
 
 
 --7. Write a query in SQL to find the number of self-goals scored in EURO cup 2016.
@@ -129,8 +129,8 @@ SELECT COUNT(*) as "Player Replaced"
 FROM player_in_out
 WHERE in_out='I';
 
-**º¸±â ´ä¾È¿¡¼­´Â Áßº¹ Á¦°Å¸¦ ¾È ÇØÁÖ¾ú´Ù. ÇØ¼®ÀÌ Â÷ÀÌÀÎ °Í °°´Ù.
-³ª´Â Áß°£¿¡ ÅõÀÔµÈ ¼±¼öÀÇ ¼ö¸¦ ±¸ÇÒ ¶§ Áßº¹À» Á¦°ÅÇß°í, º¸±â ´ä¾ÈÀº Áß°£¿¡ ÅõÀÔµÈ È½¼öÀÇ ¼ö¸¦ ±¸ÇÑ °Í °°´Ù. 
+**ë³´ê¸° ë‹µì•ˆì—ì„œëŠ” ì¤‘ë³µ ì œê±°ë¥¼ ì•ˆ í•´ì£¼ì—ˆë‹¤. í•´ì„ì´ ì°¨ì´ì¸ ê²ƒ ê°™ë‹¤.
+ë‚˜ëŠ” ì¤‘ê°„ì— íˆ¬ì…ëœ ì„ ìˆ˜ì˜ ìˆ˜ë¥¼ êµ¬í•  ë•Œ ì¤‘ë³µì„ ì œê±°í–ˆê³ , ë³´ê¸° ë‹µì•ˆì€ ì¤‘ê°„ì— íˆ¬ì…ëœ íšŸìˆ˜ì˜ ìˆ˜ë¥¼ êµ¬í•œ ê²ƒ ê°™ë‹¤. 
 
 
 --16. Write a query in SQL to find the total number of palyers replaced within normal time of play.
@@ -202,7 +202,7 @@ WHERE in_out='I'
 GROUP BY play_half,play_schedule
 ORDER BY play_half,play_schedule,count(*);
 
-**list! ´Ù¸¥ ÄÃ·³°ú count ÄÃ·³ÀÌ ÇÔ²² ÀÖÀ½. GROUP BY ÇÊ¿ä
+**list! ë‹¤ë¥¸ ì»¬ëŸ¼ê³¼ count ì»¬ëŸ¼ì´ í•¨ê»˜ ìˆìŒ. GROUP BY í•„ìš”
 
 
 --22. Write a query in SQL to find the number of shots taken in penalty shootout matches.
