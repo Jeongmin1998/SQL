@@ -24,8 +24,8 @@ SELECT emp_name, to_char(1.15*salary, '$99,999') "Salary"
 FROM employees;
 
 
-**to_char = ¼ıÀÚ³ª ³¯Â¥¸¦ ¹®ÀÚ·Î º¯È¯ÇØÁÖ´Â ÇÔ¼ö
-ÀÌ¶§, '9' = ÇÑ ÀÚ¸® ¼ıÀÚ, ½ÇÁ¦ °ªº¸´Ù Å©°Å³ª °°°Ô ¸í½Ã**
+**to_char = ìˆ«ìë‚˜ ë‚ ì§œë¥¼ ë¬¸ìë¡œ ë³€í™˜í•´ì£¼ëŠ” í•¨ìˆ˜
+ì´ë•Œ, '9' = í•œ ìë¦¬ ìˆ«ì, ì‹¤ì œ ê°’ë³´ë‹¤ í¬ê±°ë‚˜ ê°™ê²Œ ëª…ì‹œ**
 
 
 --5. Write a query in SQL to produce the output of employees name and job name as a format of "Employee & Job".
@@ -34,7 +34,7 @@ SELECT emp_name|| '   ' ||job_name "Employee & Job"
 FROM employees;
 
 
-** || ½ÖÆÄÀÌÇÁ = ¹®ÀÚ¿­ÀÌ³ª ÄÃ·³À» ÇÕÃÄÁÖ´Â ¿ªÇÒ **
+** || ìŒíŒŒì´í”„ = ë¬¸ìì—´ì´ë‚˜ ì»¬ëŸ¼ì„ í•©ì³ì£¼ëŠ” ì—­í•  **
 
 
 --6. Write a query in SQL to produce the output of employees.
@@ -55,7 +55,7 @@ SELECT length(trim(emp_name))
 FROM employees;
 
 
-**trim = ¹®ÀÚ¿­ °ø¹é Á¦°Å
+**trim = ë¬¸ìì—´ ê³µë°± ì œê±°
 
 
 --9. Write a query in SQL to list the emp_id, salary, and commission of all the employees.
@@ -97,7 +97,7 @@ SELECT *
 FROM employees
 WHERE hire_date<('1991-1-1');
 
-*³ª´Â hire_date¿¡¼­ ³âµµ¸¦ ÃßÃâÇØ¼­ ºñ±³ÇÑ °ÍÀÌ°í, sample solution¿¡¼­´Â 1991.01.01À» ±âÁØÀ¸·Î ºñ±³ÇØÁÖ¾ú´Ù.
+*ë‚˜ëŠ” hire_dateì—ì„œ ë…„ë„ë¥¼ ì¶”ì¶œí•´ì„œ ë¹„êµí•œ ê²ƒì´ê³ , sample solutionì—ì„œëŠ” 1991.01.01ì„ ê¸°ì¤€ìœ¼ë¡œ ë¹„êµí•´ì£¼ì—ˆë‹¤.
 
 
 --13. Write a query in SQL to display the average salaries of all the employees who works as ANALYST.
@@ -161,7 +161,7 @@ WHERE job_name = 'CLERK';
 SELECT * FROM employees
 WHERE EXTRACT(YEAR from age(CURRENT_DATE, hire_date)) >27;
 
-**age(°è»êÇÒ ½ÃÁ¡, ±âÁØ ½ÃÁ¡)**
+**age(ê³„ì‚°í•  ì‹œì , ê¸°ì¤€ ì‹œì )**
 
 
 --22. Write a query in SQL to list the employees whose salaries are less than 3500.
@@ -231,7 +231,7 @@ FROM employees
 WHERE hire_date + interval '8 years' > '1999-12-31';
 
 
-** interval: ½Ã°£, ³¯Â¥ ´õÇÏ±â, »©±â
+** interval: ì‹œê°„, ë‚ ì§œ ë”í•˜ê¸°, ë¹¼ê¸°
 
 
 --31. Write a query in SQL to list those employees whose salary is an odd value.
@@ -342,8 +342,8 @@ WHERE 12*(salary+commission) < 34000 AND commission <= salary
     AND job_name='SALESMAN' AND dep_id=3001;
     
     
-**ÁÖÀÇÇØ¾ßÇÒ Á¡: Á¶°Ç Áß¿¡ "commission IS NOT NULL"Àº ³ÖÁö ¾Ê¾Æµµ °ªÀÌ ¿ì¿¬È÷ ¶È°°ÀÌ ³ª¿À±ä ÇÑ´Ù.
-±×·¯³ª, ¹®Á¦¿¡¼­ "receiving some commission~"¶ó°í Çß±â ¶§¹®¿¡ ÀÌ Á¶°Ç ³Ö¾îÁà¾ß ÇÑ´Ù.**
+**ì£¼ì˜í•´ì•¼í•  ì : ì¡°ê±´ ì¤‘ì— "commission IS NOT NULL"ì€ ë„£ì§€ ì•Šì•„ë„ ê°’ì´ ìš°ì—°íˆ ë˜‘ê°™ì´ ë‚˜ì˜¤ê¸´ í•œë‹¤.
+ê·¸ëŸ¬ë‚˜, ë¬¸ì œì—ì„œ "receiving some commission~"ë¼ê³  í–ˆê¸° ë•Œë¬¸ì— ì´ ì¡°ê±´ ë„£ì–´ì¤˜ì•¼ í•œë‹¤.**
 
 
 --40. Write a query in SQL to list the employees who are either CLERK or MANAGER.
